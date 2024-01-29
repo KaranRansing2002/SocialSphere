@@ -1,5 +1,5 @@
 import { getCurrentUser } from "@/lib/appwrite/api";
-import { IUser, TContextType } from "@/types"
+import { TUser, TContextType } from "@/types"
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const AuthContext = createContext<TContextType>(initialState);
 
 const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
-  const [user, setUser] = useState<IUser>(initialUser);
+  const [user, setUser] = useState<TUser>(initialUser);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 

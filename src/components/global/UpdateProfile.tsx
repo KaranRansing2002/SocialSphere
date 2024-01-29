@@ -9,7 +9,6 @@ import { Button } from "../ui/button";
 import FileUploader from "./FileUploader";
 import { Textarea } from "../ui/textarea";
 import {  useUpdateUser } from "@/lib/reactQuery/queryMutation";
-import { useNavigate } from "react-router-dom";
 import { toast } from "../ui/use-toast";
 import { Loader } from "lucide-react";
 

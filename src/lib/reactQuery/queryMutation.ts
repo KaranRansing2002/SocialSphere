@@ -2,7 +2,6 @@ import { NewUser, TNewPost, TUpdatePost, TUpdateUser } from "@/types";
 import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createNewUser, createPost, deletePost, deleteSavedPost, getCurrentUser, getInfinitePosts, getPostById, getRecentPosts, getSearchedPosts, getUserById, getUsers, likePost, savePost, signOutAccount, signinUser, updatePost, updateUser } from "../appwrite/api";
 import { QUERY_KEYS } from "./queryKeys";
-import { Models } from "appwrite";
 
 const { GET_RECENT_POSTS,SEARCH_POSTS, GET_USER_BY_ID, GET_INFINITE_POSTS ,GET_POST_BY_ID,GET_POSTS,GET_CURRENT_USER,GET_USERS } = QUERY_KEYS
 

@@ -22,7 +22,7 @@ interface PostFormProps {
 const PostForm:React.FC<PostFormProps> = ({ post,action }) => {
 
     const { mutateAsync: createPost, isPending,isError } = useCreatePost()
-    const { mutateAsync: updatePost, isPending: isUpdatingPost,isError:isUpdateError } = useUpdatePost()
+    const { mutateAsync: updatePost, isError:isUpdateError } = useUpdatePost()
     const { mutateAsync: deletePost, isPending: isDeletingPost,isError:isDeleteError } = useDeletePost();
 
     const { user } = useUserContext();

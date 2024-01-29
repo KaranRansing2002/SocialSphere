@@ -15,7 +15,7 @@ const Signup = () => {
   
   const { mutateAsync: createUser, isPending, isError } = useCreateUser();
   const { mutateAsync: signinUser} = useSigninAccount();
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser,} = useUserContext();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(signupValdtn),
