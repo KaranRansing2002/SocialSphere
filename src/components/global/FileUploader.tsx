@@ -14,10 +14,10 @@ interface FileUploaderProps {
 const FileUploader: React.FC<FileUploaderProps> = ({ fieldChange, mediaUrl ,className=''}) => {
 
     const [fileUrl, setFileUrl] = useState<string>(mediaUrl || '');
-    const [file, setFile] = useState<File[]>([]);
+    // const [file, setFile] = useState<File[]>([]);
 
     const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
-        setFile(acceptedFiles);
+        // setFile(acceptedFiles);
         fieldChange(acceptedFiles)
         setFileUrl(URL.createObjectURL(acceptedFiles[0]))
     }, [])
@@ -28,7 +28,6 @@ const FileUploader: React.FC<FileUploaderProps> = ({ fieldChange, mediaUrl ,clas
             'image/*': ['.png', '.jpg', '.jpeg', '.svg', '.gif']
         }
     })
-    // 'flex-1 h-[95%] w-full object-cover p-2'
     return (
         <div {...getRootProps()} className='h-full flex-center border-2 border-light-4 rounded-xl'>
 

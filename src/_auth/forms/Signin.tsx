@@ -28,7 +28,7 @@ const Signin = () => {
 
   const handleDemo = () => {
     form.setValue("email", "demo@gmail.com");
-    form.setValue("password", "123456789");
+    form.setValue("password", import.meta.env.VITE_DEMO_PASSWORD);
   }
 
   async function onSubmit(values: z.infer<typeof signinValdtn>) {
