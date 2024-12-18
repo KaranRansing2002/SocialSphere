@@ -33,7 +33,7 @@ const Signin = () => {
 
   async function onSubmit(values: z.infer<typeof signinValdtn>) {
     const session = await siginUser({ email: values.email, password: values.password });
-    
+    console.log(session);
     if (isError || !session) {
       toast({
         className:'bg-red-800',

@@ -12,7 +12,7 @@ interface postCardProps {
 const PostCard: React.FC<postCardProps> = ({ post }) => {
 
     const { user } = useUserContext();
-    
+    console.log(post.imageUrl)    
 
     return (
         <div className="post-card">
